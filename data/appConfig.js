@@ -490,10 +490,10 @@ const RISK_MODULES = {
         component: 'ExternalLink',
         storageKey: "qms-external-doc-generator",
         category: "risk",
-        description: "A placeholder for an external document generation tool. This could link to a specialized service for creating complex documents, reports, or letters.",
+        description: "Document Generator",
         initialData: {
-            url: 'https://www.example.com/document-generator',
-            description: 'Link to an external document generator tool.'
+            url: 'https://jackrosesolutions.github.io/doc/',
+            description: 'Document Generator'
         }
     },
     recallManagement: {
@@ -918,15 +918,14 @@ const INTERNAL_LINKS_MODULES = {
         }
     },
     quickAccessDoc: {
-        title: "Quick Access: Document Builder",
+        title: "Quick Access: Document Control",
         component: 'InternalLink',
         storageKey: "qms-internal-doc",
         category: "internalLinks",
-        description: "Document Builder",
+        description: "Document Control",
         initialData: {
-            url: 'https://jackrosesolutions.github.io/doc',
             targetModule: 'documentControl',
-            description: 'Document Builder'
+            description: 'Document Control'
         }
     },
     quickAccessRisk: {
