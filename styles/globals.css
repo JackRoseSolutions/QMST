@@ -1,0 +1,292 @@
+/* Global Styles & Theming */
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  
+  /* Company Theme Colors */
+  --Company-red: #B00000; /* Deep Red, primary accent for "Company" */
+  --Company-red-dark: #8E0000; /* Darker red for hover/active states */
+  --Company-black: #212121; /* Rich Black, main typography and strong elements */
+  --Company-black-light: #333333; /* Slightly lighter black for backgrounds/borders */
+  --Company-white: #FFFFFF; /* Pure White, main background */
+  --Company-gray: #E0E0E0; /* Light Gray for subtle backgrounds/borders */
+  --Company-gray-dark: #757575; /* Darker gray for muted text */
+
+  /* Theme Mappings */
+  --bg-color: var(--Company-white);
+  --text-color: var(--Company-black);
+  --text-muted: var(--Company-gray-dark);
+  --header-bg: var(--Company-white);
+  --component-bg: var(--Company-white);
+  --border-color: var(--Company-gray);
+  --border-light: #F5F5F5; /* Lighter than Company-gray for subtle lines */
+  --primary-color: var(--Company-red);
+  --primary-color-hover: var(--Company-red-dark);
+  --primary-light: rgba(176, 0, 0, 0.1); /* Light tint of red */
+  --accent-color: #00796B; /* A complementary teal/dark cyan for success/positive */
+  --accent-light: rgba(0, 121, 107, 0.1); /* Light tint of accent */
+  --focus-ring-color: rgba(176, 0, 0, 0.4); /* Red focus ring */
+
+  /* Neutral palette for inputs, etc. */
+  --input-bg: var(--Company-white);
+  --success-color: var(--accent-color);
+  --warning-color: #FFC107; /* Standard yellow for warnings */
+  --error-color: #D32F2F; /* Standard red for errors */
+  --info-color: #2196F3; /* Standard blue for info */
+
+  /* Shadows - Adjusted for cleaner look */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+  --shadow-xl: 0 12px 24px rgba(0,0,0,0.2);
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: var(--Company-white);
+  --text-muted: var(--Company-gray);
+  --header-bg: #1C1C1C;
+  --component-bg: #1C1C1C;
+  --border-color: #333333;
+  --border-light: #282828;
+  --primary-color: #E57373; /* Lighter red for dark mode contrast */
+  --primary-color-hover: #EF5350;
+  --primary-light: rgba(229, 115, 115, 0.15);
+  --accent-color: #4DB6AC; /* Lighter accent for dark mode */
+  --accent-light: rgba(77, 182, 172, 0.15);
+  --focus-ring-color: rgba(229, 115, 115, 0.5);
+  --input-bg: #282828;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.1);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.15);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.2);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.25);
+  --shadow-xl: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* Import Google Font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: var(--space-6) var(--space-8);
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--text-color);
+}
+
+h1 { 
+  font-size: var(--text-4xl); 
+  margin-bottom: var(--space-6);
+}
+
+h2 { 
+  font-size: var(--text-3xl); 
+  border-bottom: 3px solid var(--primary-light);
+  padding-bottom: var(--space-3);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-6);
+  color: var(--primary-color);
+}
+
+h3 { 
+  font-size: var(--text-2xl); 
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  color: var(--text-color);
+}
+
+h4 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  color: var(--text-color);
+}
+
+h5 {
+  font-size: var(--text-lg);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--text-base);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+/* Accessibility & Utilities */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--space-3) var(--space-4);
+  z-index: 100;
+  transition: top 0.3s;
+  border-radius: 0 0 var(--radius) 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Enhanced focus styles */
+:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring-color);
+}
+
+/* Enhanced Button Styles */
+.btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-hover) 100%);
+    color: white;
+    border: none;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--primary-color-hover) 0%, var(--Company-red-dark) 100%);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--space-12) var(--space-8);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-6);
+    background: linear-gradient(145deg, var(--component-bg) 0%, var(--bg-color) 100%);
+}
+
+.empty-state h4 {
+    color: var(--text-muted);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-lg);
+}
+
+.empty-state p {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin-bottom: 0;
+}
