@@ -754,14 +754,14 @@ const EXTERNAL_RESOURCES_MODULES = {
         }
     },
     leanManagement: {
-        title: "Lean Management Resources",
+        title: "Notification Generator Test 1",
         component: 'ExternalLink',
         storageKey: "qms-external-lean",
         category: "externalResources",
-        description: "Lean Enterprise Institute resources for lean management and continuous improvement methodologies. Features include lean tools, implementation guides, and best practices. Purpose: Support lean management implementation and continuous improvement. Scope: Lean tools, waste elimination, value stream mapping, and continuous improvement methodologies.",
+        description: "Document Builder.",
         initialData: {
-            url: 'https://www.lean.org/explore-lean/',
-            description: 'Lean Enterprise Institute: Learn about Lean principles, tools like Value Stream Mapping, and continuous improvement.'
+            url: 'https://jackrosesolutions.github.io/notif',
+            description: 'Document Builder.'
         }
     },
     // Placeholder Components for External Resources
