@@ -210,14 +210,14 @@ const CORE_QMS_MODULES = {
         initialData: { targetModule: "internalAuditScheduler", description: "Quick access to Internal Audit Dashboard.", notes: "This link will take you directly to the Internal Audit Scheduler. You can filter for completed audits there." }
     },
     draftDocumentPlaceholder: {
-        title: "Draft Document Placeholder",
+        title: "Mangement Review",
         component: 'ExternalLink',
         storageKey: "qms-draft-document-placeholder",
         category: "core",
-        description: "A placeholder for an external document generation tool that links to a placeholder URL.",
+        description: "Mangement Review Tool.",
         initialData: {
-            url: 'https://www.example.com/draft-document-placeholder',
-            description: 'Link to a placeholder for drafting documents.'
+            url: 'https://jackrosesolutions.github.io/mgmtreview',
+            description: 'Mangement Review Tool.'
         }
     }
 };
