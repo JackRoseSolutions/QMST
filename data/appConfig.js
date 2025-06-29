@@ -317,10 +317,10 @@ const AUDIT_MODULES = {
         component: 'ExternalLink',
         storageKey: "qms-external-audit-presentation",
         category: "audits",
-        description: "Link to an external tool for creating and viewing audit presentations.",
+        description: "Audit Presentation Tool.",
         initialData: {
-            url: 'https://www.example.com/audit-presentation-tool',
-            description: 'Link to a simulated external Audit Presentation tool. This could be a specialized software or an online tool.'
+            url: 'https://jackrosesolutions.github.io/aud',
+            description: 'Audit Presentation Tool.'
         }
     }
 };
@@ -592,10 +592,10 @@ const QC_MODULES = {
         component: 'ExternalLink',
         storageKey: "qms-external-inspection-report-1",
         category: "qc",
-        description: "Advanced inspection report builder for Test A procedures and documentation. Features include automated report generation, customizable templates, and compliance verification. Purpose: Generate comprehensive inspection reports for Test A procedures. Scope: Specialized testing procedures, regulatory compliance reporting, and detailed inspection documentation.",
+        description: "Inspection Report Builder Test 1description: 'Inspection Report Builder Test 1.",
         initialData: {
-            url: 'https://www.example.com/inspection-report-builder-test-a',
-            description: 'Link to a simulated external Inspection Report Builder for Test A. This could be a specialized software or an online tool.'
+            url: 'https://jackrosesolutions.github.io/insp1',
+            description: 'Inspection Report Builder Test 1.'
         }
     },
     inspectionReportBuilder2: {
@@ -603,10 +603,10 @@ const QC_MODULES = {
         component: 'ExternalLink',
         storageKey: "qms-external-inspection-report-2",
         category: "qc",
-        description: "Advanced inspection report builder for Test B procedures and documentation. Features include automated report generation, customizable templates, and compliance verification. Purpose: Generate comprehensive inspection reports for Test B procedures. Scope: Specialized testing procedures, regulatory compliance reporting, and detailed inspection documentation.",
+        description: "Inspection Report Builder Test 1description: 'Inspection Report Builder Test 2.",
         initialData: {
-            url: 'https://www.example.com/inspection-report-builder-test-b',
-            description: 'Link to a simulated external Inspection Report Builder for Test B, allowing for different testing protocols or reporting needs.'
+            url: 'https://jackrosesolutions.github.io/insp2',
+            description: 'Inspection Report Builder Test 2.'
         }
     },
     // Placeholder Components for Quality Control
@@ -918,14 +918,15 @@ const INTERNAL_LINKS_MODULES = {
         }
     },
     quickAccessDoc: {
-        title: "Quick Access: Documents",
+        title: "Quick Access: Document Builder",
         component: 'InternalLink',
         storageKey: "qms-internal-doc",
         category: "internalLinks",
-        description: "Fast access to document version control and management system. Features include quick navigation to document control functions. Purpose: Provide rapid access to document management activities. Scope: Direct navigation to document version control, approval workflows, and document management tasks.",
+        description: "Document Builder",
         initialData: {
+            url: 'https://jackrosesolutions.github.io/doc',
             targetModule: 'documentControl',
-            description: 'Fast access to document version control and management system'
+            description: 'Document Builder'
         }
     },
     quickAccessRisk: {
